@@ -1,3 +1,6 @@
+Installation adapted for RaspberryPi 4b running Raspian Buster
+==============================================================
+
 # py-kaldi-asr
 
 Some simple wrappers around kaldi-asr intended to make using kaldi's online nnet3-chain
