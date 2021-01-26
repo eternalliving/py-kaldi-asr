@@ -38,7 +38,7 @@ def find_dependencies():
 
         found = False
         
-        for libdir in ['/usr/lib', '/usr/lib64', '/usr/lib/x86_64-linux-gnu', '/usr/lib/i386-linux-gnu']:
+        for libdir in ['/usr/lib', '/usr/lib64', '/usr/lib/x86_64-linux-gnu', '/usr/lib/i386-linux-gnu', '/usr/lib/arm-linux-gnueabihf']:
         	if os.path.isfile('%s/libatlas.so.3' % libdir):
         		found=True
         		break
@@ -53,7 +53,7 @@ def find_dependencies():
         if not os.path.isdir('/usr/include/atlas'):
             raise Exception ('Failed to find atlas includes your system.')
         
-        kw.setdefault('include_dirs', []).append('/usr/include/atlas')
+        kw.setdefault('include_dirs', []).append('/usr/include/arm-linux-gnueabihf/atlas')
 
         print ("looking for atlas library, found it.")
     else:
